@@ -1,6 +1,6 @@
 from PySide2 import QtCore, QtGui, QtWidgets
 
-class Dialog(QtWidgets.QWidget):
+class Dialog(QtWidgets.QDialog):
     NumGridRows = 3
     NumButtons = 4
 
@@ -74,7 +74,7 @@ class Dialog(QtWidgets.QWidget):
     def createFormGroupBox(self):
         self.formGroupBox = QtWidgets.QGroupBox("Form layout")
         layout = QtWidgets.QFormLayout()
-        layout.addRow(QtWidgets.QLabel("Line 1:"), QtWidgets.QLIneEdit())
+        layout.addRow(QtWidgets.QLabel("Line 1:"), QtWidgets.QLineEdit())
         layout.addRow(QtWidgets.QLabel("Line 2:, long text:"), QtWidgets.QComboBox())
         layout.addRow(QtWidgets.QLabel("Line 3:"), QtWidgets.QSpinBox())
         self.formGroupBox.setLayout(layout)
